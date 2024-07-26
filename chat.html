@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Chat</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <button class="nav-toggle" aria-label="Open navigation">&#9776;</button>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">Página principal</a></li>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="#">Manuales y tutoriales</a></li>
+                    <li><a href="#">Calendario</a></li>
+                    <li><a href="#">Tu perfil</a></li>
+                    <li><a href="#">Organigrama</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="chat-container">
+            <aside class="recent-chats">
+                <div class="search-container">
+                    <input type="search" placeholder="Buscar contacto">
+                    <button class="search-button"><i class="fas fa-search"></i></button>
+                </div>
+                <ul class="chat-list">
+                    <li class="chat-item unread" id="chat-pedro" onclick="selectChat('pedro')">
+                        <img src="assets/img/hombre1.jfif" alt="Pedro">
+                        <div class="chat-info">
+                            <p class="chat-name">Pedro</p>
+                            <p class="chat-last-message">Tienes 3 mensajes no leídos</p>
+                            <span class="chat-time">hace 2 minutos</span>
+                        </div>
+                    </li>
+                    <li class="chat-item unread" id="chat-juan" onclick="selectChat('juan')">
+                        <img src="assets/img/hombre2.webp" alt="Juan">
+                        <div class="chat-info">
+                            <p class="chat-name">Juan</p>
+                            <p class="chat-last-message">Tienes 4 mensajes no leídos</p>
+                            <span class="chat-time">hace 40 minutos</span>
+                        </div>
+                    </li>
+                    <li class="chat-item">
+                        <img src="assets/img/mujer1.jfif" alt="User 3">
+                        <div class="chat-info">
+                            <p class="chat-name">Andrea</p>
+                            <p class="chat-last-message">Lorem ipsum dolor sit amet</p>
+                            <span class="chat-time">hace 1 hora</span>
+                        </div>
+                    </li>
+                    <li class="chat-item">
+                        <img src="assets/img/hombre3.jfif" alt="User 4">
+                        <div class="chat-info">
+                            <p class="chat-name">Luis</p>
+                            <p class="chat-last-message">Lorem ipsum dolor sit amet</p>
+                            <span class="chat-time">hace 4 horas</span>
+                        </div>
+                    </li>
+                    <li class="chat-item">
+                        <img src="assets/img/mujer2.jfif" alt="User 5">
+                        <div class="chat-info">
+                            <p class="chat-name">Julieta</p>
+                            <p class="chat-last-message">Lorem ipsum dolor sit amet</p>
+                            <span class="chat-time">hace 2 días</span>
+                        </div>
+                    </li>
+                    <li class="chat-item">
+                        <img src="assets/img/hombre4.jfif" alt="User 6">
+                        <div class="chat-info">
+                            <p class="chat-name">Joaquin</p>
+                            <p class="chat-last-message">Lorem ipsum dolor sit amet</p>
+                            <span class="chat-time">hace 1 semana</span>
+                        </div>
+                    </li>
+                </ul>
+            </aside>
+            <main class="chat">
+                <div class="chat-header">
+                    <button class="nav-toggle"><i class="fas fa-bars"></i></button>
+                    <button class="back-button"><i class="fas fa-arrow-left"></i></button>
+                    <img src="assets/img/hombre1.jfif" alt="Pedro">
+                    <h2>Pedro</h2>
+                </div>
+                <div class="messages" id="messages-container">
+                    <!-- Mensajes de Pedro -->
+                    <div class="message received">
+                        <p>Hola, ¿cómo estás?</p>
+                        <span class="time">hace 2 minutos</span>
+                    </div>
+                    <div class="message sent">
+                        <p>Estoy bien, ¿y tú?</p>
+                        <span class="time">hace 1 minuto</span>
+                    </div>
+                    <div class="message received">
+                        <p>Todo bien, gracias. ¿Quieres hacer algo esta tarde?</p>
+                        <span class="time">hace 30 segundos</span>
+                    </div>
+                </div>
+                <div class="chat-footer">
+                    <!-- Menú Dropdown para Adjuntar -->
+                    <div class="dropdown">
+                        <button class="dropdown-button">Adjuntar <i class="fas fa-paperclip"></i></button>
+                        <div class="dropdown-content">
+                            <a href="#" onclick="attachFile('image')">Imagen</a>
+                            <a href="#" onclick="attachFile('video')">Video</a>
+                            <a href="#" onclick="attachFile('document')">Documento</a>
+                        </div>
+                    </div>
+                    <input type="text" placeholder="Escribe un mensaje">
+                    <button class="send"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="assets/js/logica.js"></script>
+</body>
+</html>

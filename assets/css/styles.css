@@ -1,0 +1,246 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #40444b;
+  color: #ffffff;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #99aab5;
+  padding: 10px 0;
+}
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.nav ul li {
+  margin: 0 10px;
+}
+.nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  flex-shrink: 0;
+}
+
+.chat-container {
+  display: flex;
+  flex: 1;
+}
+
+.recent-chats {
+  flex: 1;
+  background-color: #2c2f33;
+  border-right: 1px solid #ffffff;
+  overflow-y: auto;
+}
+.recent-chats .search-container {
+  position: relative;
+  padding: 10px;
+  background-color: #23272a;
+}
+.recent-chats .search-container input {
+  width: 100%;
+  padding: 10px 40px 10px 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #40444b;
+  color: #ffffff;
+}
+.recent-chats .search-container .search-button {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+}
+.recent-chats .chat-list {
+  list-style: none;
+  padding: 0;
+}
+.recent-chats .chat-list .chat-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ffffff;
+  cursor: pointer;
+}
+.recent-chats .chat-list .chat-item img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.recent-chats .chat-list .chat-item .chat-info .chat-name {
+  margin: 0;
+}
+.recent-chats .chat-list .chat-item .chat-info .chat-last-message {
+  font-size: 12px;
+  color: #99aab5;
+  margin: 0;
+}
+.recent-chats .chat-list .chat-item .chat-info .chat-time {
+  font-size: 10px;
+  color: #ffffff;
+}
+
+.chat-item.unread {
+  background-color: #7289da;
+}
+
+.chat {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  background-color: #2c2f33;
+}
+.chat .chat-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f04747;
+}
+.chat .chat-header .nav-toggle, .chat .chat-header .back-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  margin-right: 10px;
+}
+@media (min-width: 768px) {
+  .chat .chat-header .nav-toggle, .chat .chat-header .back-button {
+    display: none;
+  }
+}
+.chat .chat-header img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+.chat .chat-header h2 {
+  color: #fff;
+  font-size: 18px;
+  margin: 0;
+}
+.chat .messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+.chat .messages .message {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.chat .messages .message p {
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 70%;
+}
+.chat .messages .message .time {
+  font-size: 10px;
+  color: #ffffff;
+  margin-left: 10px;
+}
+.chat .messages .message.sent {
+  justify-content: flex-end;
+}
+.chat .messages .message.sent p {
+  background-color: #f04747;
+  color: #fff;
+}
+.chat .messages .message.received {
+  justify-content: flex-start;
+}
+.chat .messages .message.received p {
+  background-color: #99aab5;
+  color: #fff;
+}
+.chat .chat-footer {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #23272a;
+}
+.chat .chat-footer input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  margin: 0 10px;
+  background-color: #40444b;
+  color: #ffffff;
+}
+.chat .chat-footer .attach, .chat .chat-footer .send {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropdown-button {
+  background-color: #0056b3;
+}
+
+/*# sourceMappingURL=styles.css.map */

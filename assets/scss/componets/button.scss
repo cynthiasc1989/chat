@@ -1,0 +1,50 @@
+// _components.scss
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .mobile-only {
+        display: none;
+    }
+
+    .desktop-only {
+        display: flex;
+        list-style: none;
+        padding: 0;
+
+        li {
+            margin: 0 10px;
+
+            a {
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.chat-sidebar {
+    display: none;
+}
+
+.chat-window {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.chat-header,
+.chat-footer {
+    @include flex-center;
+    background-color: $primary-color;
+    color: white;
+    padding: 10px;
+}
